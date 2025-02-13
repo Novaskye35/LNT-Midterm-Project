@@ -21,7 +21,7 @@ class EmployeeController extends Controller
             'name' =>['required', 'min:5', 'max:20'],
             'age' =>['required', 'integer', 'min:20'],
             'address' =>['required', 'min:10', 'max:40'],
-            'phone' =>['required', 'integer', 'min:8', 'max:10', 'regex:/^08']
+            'phone' =>['required', 'integer', 'min:8', 'max:10', 'startswith:08']
         ]);
         Employee::create([
             'name' => $request->name,
