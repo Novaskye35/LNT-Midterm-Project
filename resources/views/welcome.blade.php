@@ -11,7 +11,7 @@
       <p class="card-text">{{$e->address}}</p>
       <p class="card-text">{{$e->phone}}</p>
 
-      <a href="#" class="btn btn-primary">Edit</a>
+      <a href="/updateEmplyee/{{$e->id}}" class="btn btn-primary">Edit</a>
       <a href="#" class="btn btn-primary">Delete</a>
     </div>
   </div>
