@@ -12,7 +12,11 @@
       <p class="card-text">{{$e->phone}}</p>
 
       <a href="/updateEmplyee/{{$e->id}}" class="btn btn-primary">Edit</a>
-      <a href="#" class="btn btn-primary">Delete</a>
+        <form action="/delete/{{$e->id}}" method="POST">
+            @method('delete')
+            @csrf
+            <button type="submit" class="btn btn-danger">Deletee</button>
+        </form>
     </div>
   </div>
 @empty

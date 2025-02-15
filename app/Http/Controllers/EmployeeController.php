@@ -59,5 +59,13 @@ class EmployeeController extends Controller
         return redirect()->route('book.view');
     }
 
+    public function deleteEmployee($id){
+        $employee = Employee::find($id);
+
+        $employee->delete();
+
+        return redirect()->route('book.view');
+    }
+
 }
 
